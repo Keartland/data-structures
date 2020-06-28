@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Quad tree</title>
+    <style>
+    body {
+        color:#FFFFFF;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+        background-color: #293241;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p {
+        margin:0;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="900" height="900"></canvas>
+    <script src="quad-tree.js" type="text/javascript"></script>
+    <p>Press the mouse to make all the particles fly towards it. When drawing the quad tree the particles are surrounded by a box which is the region they check for other particles in (larger because the sizes of the particles). They get coloured white when they are colliding with another particle</p>
+    <input type="checkbox" id="drawQuad" name="drawQuad" value="drawQuad">
+    <label for="drawQuad">Draw Quad Tree</label><br>
+    <input type="range" min="1" max="1000" value="500" oninput="regenParticles()" id="particlesCount">
+    <label id="sliderLabel" for="particlesCount">500</label><br>
+</body>
+</html>
